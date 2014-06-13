@@ -4,20 +4,11 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Hashtable;
 import java.util.Scanner;
 
+import divers.Heure;
 import exception.HeureIncorrecteException;
-import exception.MatiereSaisieIncorrecteException;
-import exception.NoteSaisieIncorrecteException;
-import exception.RecetteDejaEnMemoireException;
-import module_agenda.Evenement;
-import module_agenda.Heure;
-import module_alimentation.Aliment;
-import module_alimentation.Recette;
-import module_scolaire.Matiere;
-import module_scolaire.Note;
-import module_scolaire.UE;
+
 
 /**
  * @author geourjoa
@@ -90,11 +81,9 @@ public class InteractionConsole implements Interaction
 	}
 
 	@Override
-	public interaction.Heure demanderUneHeure() throws HeureIncorrecteException
-	{
-		Scanner sc = new Scanner(System.in);
-		
-		
+	public Heure demanderUneHeure() throws HeureIncorrecteException
+	{		
+		return new Heure(this.demanderUnInt(), this.demanderUnInt());		
 	}
 
 	

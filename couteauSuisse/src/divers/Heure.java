@@ -15,38 +15,67 @@ public class Heure
 
 	private int heure;
 
+	/**
+	 * @return la minute de l'heure
+	 */
 	public int obtenirMinute()
 	{
-		return minute;
+		return this.minute;
 	}
 
-	public void modifierMinute(int minute)
+	/**
+	 * @return l'heure
+	 */
+	public int obtenirHeure()
 	{
+		return this.heure;
+	}
+
+	/**
+	 * @param minute
+	 *            nouvelle minute
+	 * @throws HeureIncorrecteException
+	 *             levé si la minute n'est pas correcte
+	 */
+	public void modifierMinute(int minute) throws HeureIncorrecteException
+	{
+		this.testerMinute(minute);
 		this.minute = minute;
 	}
 
-	public int obtenirHeure()
+	/**
+	 * @param heure
+	 *            nouvelle heure
+	 * @throws HeureIncorrecteException
+	 *             levé si l'heure en parametre est correcte
+	 */
+	public void modifierHeure(int heure) throws HeureIncorrecteException
 	{
-		return heure;
-	}
+		if (heure > 23 || heure < 0)
+			throw new HeureIncorrecteException();
 
-	public void modifierHeure(int heure)
-	{
 		this.heure = heure;
 	}
 
+	/**
+	 * @param heure heure de l'heure
+	 * @param minute minute de l'heure
+	 * @throws HeureIncorrecteException levée si heure incorrecte
+	 */
 	public Heure(int heure, int minute) throws HeureIncorrecteException
 	{
-		if(heure>=0&&heure<24&&minute>=0&&minute<60)
-			{
-			this.heure = heure;
-			this.minute = minute;
-			}
-		else
-			throw new HeureIncorrecteException();
-			
+		this.testerHeure(heure);
+		this.testerMinute(minute);
+		this.heure = heure;
+		this.minute = minute;
 	}
 
+	/**
+	 * @param heureFin
+	 *            heure à tester
+	 * @return vrai l'heure en parametre est avant avant ou égale à l'heure
+	 *         courante, faux sinon.
+	 */
 	public boolean avant(Heure heureFin)
 	{
 		if (this.heure > heureFin.heure)
@@ -59,6 +88,28 @@ public class Heure
 				return true;
 			return true;
 		}
+	}
+
+	/**
+	 * @param minute
+	 *            minute à tester
+	 * @throws HeureIncorrecteException
+	 */
+	private void testerMinute(int minute) throws HeureIncorrecteException
+	{
+		if (minute < 0 || minute > 59)
+			throw new HeureIncorrecteException();
+	}
+
+	/**
+	 * @param heure
+	 *            heure à tester
+	 * @throws HeureIncorrecteException
+	 */
+	private void testerHeure(int heure) throws HeureIncorrecteException
+	{
+		if (heure > 23 || heure < 0)
+			throw new HeureIncorrecteException();
 	}
 
 }

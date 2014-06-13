@@ -34,7 +34,7 @@ public class CouteauSuisse
 	/**
 	 * Utiliser le couteau-suisse et ses fonctionnalité
 	 */
-	public void utilierCouteauSuisse()
+	public void utiliserCouteauSuisse()
 	{
 		Boolean application = true;
 

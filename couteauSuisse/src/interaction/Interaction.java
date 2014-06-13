@@ -2,6 +2,7 @@ package interaction;
 
 import java.util.Date;
 
+import divers.Heure;
 import exception.HeureIncorrecteException;
 
 /**

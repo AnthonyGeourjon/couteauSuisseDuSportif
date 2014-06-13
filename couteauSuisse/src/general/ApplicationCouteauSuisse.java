@@ -15,6 +15,8 @@ public class ApplicationCouteauSuisse
 	public static void main(String[] args)
 	{
 		CouteauSuisse couteauSuisse = new CouteauSuisse(new InteractionConsole(), new AffichageConsole());
+		
+		couteauSuisse.utiliserCouteauSuisse();
 
 	}
 
