@@ -9,7 +9,7 @@ public class AffichageConsole implements Affichage
 	@Override
 	public void afficherLeNomDeLApplication()
 	{
-		System.out.println("*****************************************\n" + "   Le couteau suisse de l'etudiant :\n"
+		System.out.println("*****************************************\n" + "  Couteau-suisse du sportif :\n"
 				+ "*****************************************\n");
 	}
 
@@ -30,7 +30,7 @@ public class AffichageConsole implements Affichage
 	public void afficherMenuPrincipal()
 	{
 		System.out.println("==========================\n" + "     Menu principal : \n" + "==========================\n"
-				+ "\n1-Module alimentation, \n2-Module scolaire, \n3-Module agenda, \n4-Module budget\n0-Quitter.\n");
+				+ "\n1-Module vélo route\n0-Quitter.\n");
 
 	}
 

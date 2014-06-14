@@ -29,6 +29,7 @@ public class ModuleSportDEndurance implements Module
 	{
 		this.affichageUtilise = affichageUtilise;
 		this.interactionUtilise = interactionUtilise;
+		this.carnetDeSortieDEntrainement = new CarnetDeSortie();
 	}
 
 	@Override
