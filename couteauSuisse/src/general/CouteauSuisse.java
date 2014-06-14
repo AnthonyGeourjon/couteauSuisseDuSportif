@@ -1,6 +1,6 @@
 package general;
 
-import moduleVeloRoute.moduleVeloRoute;
+import moduleSportEndurance.ModuleSportDEndurance;
 import affichage.Affichage;
 import affichage.AffichageConsole;
 import interaction.Interaction;
@@ -17,7 +17,7 @@ public class CouteauSuisse
 
 	private Affichage affichageUtilise;
 
-	private moduleVeloRoute moduleVeloRoute;
+	private ModuleSportDEndurance moduleVeloRoute;
 
 	/**
 	 * @param interactionUtilise

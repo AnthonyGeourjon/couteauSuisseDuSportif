@@ -62,8 +62,13 @@ public class AffichageConsole implements Affichage
 	@Override
 	public void demanderUnChoix()
 	{
-		// TODO Auto-generated method stub
-
+		System.out.println("Saisissez le numéro de la fonction désirée : ");
+	}
+	
+	@Override
+	public void afficherMenuVeloRoute()
+	{
+		// TODO Auto-generated method stub		
 	}
 
 }

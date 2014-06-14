@@ -2,8 +2,8 @@ package interaction;
 
 import java.util.Date;
 
-import divers.Heure;
-import exception.HeureIncorrecteException;
+import divers.Duree;
+import exception.DureeIncorrecteException;
 
 /**
  * @author Anthony 
@@ -33,9 +33,9 @@ public interface Interaction
 
 	/**
 	 * @return une date saisie par l'utilisateur
-	 * @throws HeureIncorrecteException
+	 * @throws DureeIncorrecteException
 	 *             levée si l'heure est incorrecte
 	 */
-	public abstract Heure demanderUneHeure() throws HeureIncorrecteException;
+	public abstract Duree demanderUneHeure() throws DureeIncorrecteException;
 
 }

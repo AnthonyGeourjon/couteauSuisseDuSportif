@@ -6,8 +6,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 
-import divers.Heure;
-import exception.HeureIncorrecteException;
+import divers.Duree;
+import exception.DureeIncorrecteException;
 
 
 /**
@@ -81,9 +81,9 @@ public class InteractionConsole implements Interaction
 	}
 
 	@Override
-	public Heure demanderUneHeure() throws HeureIncorrecteException
+	public Duree demanderUneHeure() throws DureeIncorrecteException
 	{		
-		return new Heure(this.demanderUnInt(), this.demanderUnInt());		
+		return new Duree(this.demanderUnInt(), this.demanderUnInt());		
 	}
 
 	

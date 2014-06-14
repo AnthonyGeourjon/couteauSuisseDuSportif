@@ -51,4 +51,9 @@ public interface Affichage
 	 */
 	public abstract void notifierArretApplication();
 
+	/**
+	 * Afficher le menu vélo route
+	 */
+	public abstract void afficherMenuVeloRoute();
+
 }
