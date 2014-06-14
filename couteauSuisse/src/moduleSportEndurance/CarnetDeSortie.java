@@ -28,9 +28,10 @@ public class CarnetDeSortie
 		this.deniveleTotal = 0;
 		this.distanceTotal = 0;
 		this.dureeTotale = new Duree();
+		this.carnet=new Hashtable<>();
 	}
 
-	private void mettreAJourCarnet(int distance, int denivele, Duree duree)
+	private void mettreAJourCarnet(float distance, int denivele, Duree duree)
 	{
 		this.distanceTotal += distance;
 		this.deniveleTotal += denivele;
@@ -43,12 +44,41 @@ public class CarnetDeSortie
 	 */
 	public void ajouterUneSortie(Sortie sortieAAjouter) throws SortieDejaEnMemoireException
 	{
-		if (this.carnet.containsKey(sortieAAjouter.obtenirDate()))
+		if (this.trouverUneSortie(sortieAAjouter.obtenirDate()))
 			throw new SortieDejaEnMemoireException();
 		else
 		{
 			this.carnet.put(sortieAAjouter.obtenirDate(), sortieAAjouter);
 			this.mettreAJourCarnet(sortieAAjouter.obtenirDistance(), sortieAAjouter.obtenirDenivele(), sortieAAjouter.obtenirDuree());
 		}
+	}
+	
+	private boolean trouverUneSortie(Date dateDeLaSortie)
+	{
+		return this.carnet.containsKey(dateDeLaSortie);
+	}
+	
+	/**
+	 * @return le denivelé total
+	 */
+	public int obtenirDeniveleTotal()
+	{
+		return this.deniveleTotal;
+	}
+	
+	/**
+	 * @return la distance total
+	 */
+	public int obtenirDistanceTotal()
+	{
+		return this.distanceTotal;
+	}
+	
+	/**
+	 * @return la durée total
+	 */
+	public Duree obtenirDureeTotale()
+	{
+		return this.dureeTotale;
 	}
 }
